@@ -1,13 +1,10 @@
 # pcap-forensics
 
 ![CI](https://github.com/aka-met4ll0f/pcap-forensics/actions/workflows/ci.yml/badge.svg)
+![Tipo](https://img.shields.io/badge/Tipo-Forensics-blue)
 
 ## Descripción
 Automatización de captura y análisis de tráfico para investigación de red.
-
-## Autor
-- Autor: **met4ll0f**
-- GitHub: `https://github.com/aka-met4ll0f`
 
 ## Scripts incluidos
 - `analisis_pcap.py`: ejecuta múltiples comandos `tshark/capinfos` y construye un reporte Markdown.
@@ -38,6 +35,10 @@ Automatización de captura y análisis de tráfico para investigación de red.
 ## Salidas
 - Reportes Markdown (`reporte.md`, `reporte_ot.md`).
 - Capturas y reportes en `~/tor_logs/`.
+
+## Autor
+- Autor: **met4ll0f**
+- GitHub: `https://github.com/aka-met4ll0f`
 
 ## Aviso legal
 Usar solo con permiso del propietario del sistema o en laboratorio/CTF. El creador no se hace responsable por el mal uso.
