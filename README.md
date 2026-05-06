@@ -13,6 +13,12 @@ Automatización de captura y análisis de tráfico para investigación de red.
 - `analisis_pcap.py`: ejecuta múltiples comandos `tshark/capinfos` y construye un reporte Markdown.
 - `tor_tunnel.sh`: enruta tráfico local por Tor, captura paquetes y genera resumen de análisis.
 
+## Resumen rápido
+| Script | Entrada | Salida | Uso típico |
+|---|---|---|---|
+| `analisis_pcap.py` | Archivo `.pcap/.pcapng` | Reporte `.md` | Análisis técnico y forense de capturas de red |
+| `tor_tunnel.sh` | Parámetro `--start/--stop` | `.pcap` + resumen `.txt` | Pruebas de tráfico enroutado por Tor con evidencia |
+
 ## Requisitos
 - Linux con `python3` y `bash`.
 - `tshark`, `capinfos` (opcional para extras), `tor`, `tcpdump`, `iptables`.
