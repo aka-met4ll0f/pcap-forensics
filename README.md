@@ -2,8 +2,10 @@
 
 ![CI](https://github.com/aka-met4ll0f/pcap-forensics/actions/workflows/ci.yml/badge.svg)
 
+## Descripción
 Automatización de captura y análisis de tráfico para investigación de red.
 
+## Autor
 - Autor: **met4ll0f**
 - GitHub: `https://github.com/aka-met4ll0f`
 
@@ -15,7 +17,7 @@ Automatización de captura y análisis de tráfico para investigación de red.
 - Linux con `python3` y `bash`.
 - `tshark`, `capinfos` (opcional para extras), `tor`, `tcpdump`, `iptables`.
 
-## Uso paso a paso
+## Uso
 1. Da permisos de ejecución:
    - `chmod +x analisis_pcap.py tor_tunnel.sh`
 2. Ejecuta análisis de una captura:
@@ -31,5 +33,5 @@ Automatización de captura y análisis de tráfico para investigación de red.
 - Reportes Markdown (`reporte.md`, `reporte_ot.md`).
 - Capturas y reportes en `~/tor_logs/`.
 
-## Disclaimer
+## Aviso legal
 Usar solo con permiso del propietario del sistema o en laboratorio/CTF. El creador no se hace responsable por el mal uso.
