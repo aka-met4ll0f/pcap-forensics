@@ -2,7 +2,17 @@
 set -euo pipefail
 
 # DISCLAIMER: uso autorizado en laboratorio/controlado.
-# Autor: met4ll0f | https://github.com/met4ll0f
+# Autor: met4ll0f | https://github.com/aka-met4ll0f
+
+print_banner() {
+  cat <<'EOF'
+ _____ ___  ____    _____ _   _ _   _ _   _ _____ _
+|_   _/ _ \|  _ \  |_   _| | | | \ | | \ | | ____| |
+  | || | | | |_) |   | | | | | |  \| |  \| |  _| | |
+  | || |_| |  _ <    | | | |_| | |\  | |\  | |___| |___
+  |_| \___/|_| \_\   |_|  \___/|_| \_|_| \_|_____|_____|
+EOF
+}
 
 TOR_UID=$(id -u tor)
 TORRC="/etc/tor/torrc"
@@ -61,7 +71,7 @@ stop_tor_tunnel() {
 }
 
 case "${1:-}" in
-  --start) start_tor_tunnel ;;
-  --stop) stop_tor_tunnel ;;
+  --start) print_banner; start_tor_tunnel ;;
+  --stop) print_banner; stop_tor_tunnel ;;
   *) echo "Uso: $0 --start | --stop" ;;
 esac

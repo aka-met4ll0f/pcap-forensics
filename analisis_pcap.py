@@ -10,6 +10,15 @@ import sys
 from pathlib import Path
 
 
+BANNER = r"""
+   _                _ _     _     ____   ____    _    ____
+  / \   _ __   __ _| (_)___(_)___|  _ \ / ___|  / \  |  _ \
+ / _ \ | '_ \ / _` | | / __| / __| |_) | |     / _ \ | |_) |
+/ ___ \| | | | (_| | | \__ \ \__ \  __/| |___ / ___ \|  __/
+/_/   \_\_| |_|\__,_|_|_|___/_|___/_|    \____/_/   \_\_|
+"""
+
+
 def run_shell_command(cmd: str):
     result = subprocess.run(["bash", "-lc", cmd], capture_output=True, text=True)
     return result.stdout.strip(), result.stderr.strip(), result.returncode
@@ -74,7 +83,7 @@ def generate_markdown_report(pcap_path: str, out_md: str, include_extras: bool =
         "",
         "## Disclaimer",
         "Uso exclusivo para análisis autorizado.",
-        "Autor: met4ll0f | GitHub: https://github.com/met4ll0f",
+        "Autor: met4ll0f | GitHub: https://github.com/aka-met4ll0f",
         "",
         "## Contenido",
         "",
@@ -122,6 +131,7 @@ def generate_markdown_report(pcap_path: str, out_md: str, include_extras: bool =
 
 
 def main():
+    print(BANNER)
     parser = argparse.ArgumentParser(description="Genera reporte Markdown desde una captura pcap/pcapng.")
     parser.add_argument("-r", "--read", required=True, help="Ruta del archivo .pcap/.pcapng")
     parser.add_argument("-o", "--output", default="reporte_captura.md", help="Ruta de salida .md")
