@@ -1,44 +1,44 @@
 # pcap-forensics
 
 ![CI](https://github.com/aka-met4ll0f/pcap-forensics/actions/workflows/ci.yml/badge.svg)
-![Tipo](https://img.shields.io/badge/Tipo-Forensics-blue)
+![Type](https://img.shields.io/badge/Type-Forensics-blue)
 
-## Descripción
-Automatización de captura y análisis de tráfico para investigación de red.
+## Description
+Network traffic capture and analysis automation for forensic and technical investigations.
 
-## Scripts incluidos
-- `analisis_pcap.py`: ejecuta múltiples comandos `tshark/capinfos` y construye un reporte Markdown.
-- `tor_tunnel.sh`: enruta tráfico local por Tor, captura paquetes y genera resumen de análisis.
+## Included scripts
+- `analisis_pcap.py`: runs multiple `tshark/capinfos` commands and builds a Markdown report.
+- `tor_tunnel.sh`: routes local traffic through Tor, captures packets, and generates an analysis summary.
 
-## Resumen rápido
-| Script | Entrada | Salida | Uso típico |
+## Quick summary
+| Script | Input | Output | Typical use |
 |---|---|---|---|
-| `analisis_pcap.py` | Archivo `.pcap/.pcapng` | Reporte `.md` | Análisis técnico y forense de capturas de red |
-| `tor_tunnel.sh` | Parámetro `--start/--stop` | `.pcap` + resumen `.txt` | Pruebas de tráfico enroutado por Tor con evidencia |
+| `analisis_pcap.py` | `.pcap/.pcapng` file | `.md` report | Technical and forensic packet-capture analysis |
+| `tor_tunnel.sh` | `--start/--stop` flag | `.pcap` + `.txt` summary | Tor-routed traffic testing with evidence collection |
 
-## Requisitos
-- Linux con `python3` y `bash`.
-- `tshark`, `capinfos` (opcional para extras), `tor`, `tcpdump`, `iptables`.
+## Requirements
+- Linux with `python3` and `bash`.
+- `tshark`, `capinfos` (optional for extra checks), `tor`, `tcpdump`, `iptables`.
 
-## Uso
-1. Da permisos de ejecución:
+## Usage
+1. Grant execution permissions:
    - `chmod +x analisis_pcap.py tor_tunnel.sh`
-2. Ejecuta análisis de una captura:
+2. Run a capture analysis:
    - `python3 analisis_pcap.py -r Captura.pcapng -o reporte.md`
-3. Para modo forense/OT:
+3. For forensic/OT mode:
    - `python3 analisis_pcap.py -r Captura.pcapng -o reporte_ot.md --forense-ot`
-4. Para túnel Tor + captura:
+4. For Tor tunnel + capture:
    - `./tor_tunnel.sh --start`
-   - realiza pruebas de tráfico
+   - run your traffic tests
    - `./tor_tunnel.sh --stop`
 
-## Salidas
-- Reportes Markdown (`reporte.md`, `reporte_ot.md`).
-- Capturas y reportes en `~/tor_logs/`.
+## Outputs
+- Markdown reports (`reporte.md`, `reporte_ot.md`).
+- Captures and reports in `~/tor_logs/`.
 
-## Autor
-- Autor: **met4ll0f**
+## Author
+- Author: **met4ll0f**
 - GitHub: `https://github.com/aka-met4ll0f`
 
-## Aviso legal
-Usar solo con permiso del propietario del sistema o en laboratorio/CTF. El creador no se hace responsable por el mal uso.
+## Legal Notice
+Use only with explicit owner permission or in a controlled lab/CTF. The creator is not responsible for misuse.
